@@ -1,0 +1,300 @@
+
+
+*{
+    margin: 0;
+    padding: 0;     /*reseteo los espacios que el navegador trae por defecto */
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: inherit;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.427);
+}
+
+nav{
+
+
+}
+
+ul{
+    display: flex;
+    
+}
+
+li{
+    margin: 0 20px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+li:hover{
+    color: #0051ff;
+}
+
+li:first-child {
+   color: #0051ff;
+  }
+
+header .logo span{
+    color: #0051ff;
+}
+
+.logo{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.button{
+    display: none;
+    font-size: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 80px;
+ 
+  }
+
+  img{
+    width: 350px;
+    height: 350px;
+  }
+
+
+  /* section {
+    padding: 160px 15% 120px;
+} */
+
+/* texto + imagen */
+.img{
+    
+    height: calc(100vh - 86px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.img-text{
+    margin: 0 50px;
+}
+
+.slide{
+font-size: 35px;
+margin-bottom: 10px;
+}
+
+.one{
+    background-color: #0051ff;
+   
+    border-radius: 3px;
+    padding:0 10px;
+}
+
+.two {
+    display: inline-block;
+    color: var(--second-color);
+    
+    font-weight: 500;
+}
+     
+.img-text h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1;
+    margin: 0 0 8px;
+
+}
+
+.img-text h3 {
+    color: var(--text-color);
+    margin: 0 0 35px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.img-text p {
+    color: var(--second-color);
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.btn{
+    
+    display: inline-block;
+    padding: 12px;
+    background: #0051ff;
+    border-radius: 5px;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: all .45s ease;
+  
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.img-img{
+    width: 600px;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+/* About */
+
+.about{
+    margin:0 120px ;
+    
+}
+
+.about-title{
+width: 100%;
+margin-bottom: 100px;
+text-align: center;
+
+position: relative;
+font-size: 50px;
+font-weight: 700px;
+margin-bottom: 40px;
+}
+
+.about-title span{
+    color: #0051ff;
+}
+
+.about-title::before{
+content: '';
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: -5px;
+width: 60px;
+height: 4px;
+background: #000;
+}
+
+.about-text h2{
+    color: rgb(28, 27, 27);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.about-text p{
+    max-width: 700px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+ .about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  
+}
+
+.about-img{
+ object-fit: cover;
+ width: 400px;
+ height: auto;
+}
+
+.about-button{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Services */
+
+.services{
+    margin-top: 50px;
+}
+
+.services-container{
+    display: flex;
+    margin: 0 50px;
+}
+
+.services-box{
+    margin: 0 20px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
+}
+
+.services-box h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-box p{
+    font-size: 20px;
+}
+
+.services-container .services-box .btn{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+ }
+
+/* Parte Responsiva */
+@media screen and (max-width:480px){
+    .button{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav{
+        
+        display: none; 
+         
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background-color: white;
+        text-align: center;
+           
+    }
+
+    nav.activo{
+        display: block; 
+    }
+
+   ul{
+    
+    flex-direction: column;
+    
+   }
+ 
+   li{
+    margin: 10px 0;
+    
+   }
+}
